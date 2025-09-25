@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Face Detection</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Face Detection Website</title>
 </head>
 <body>
-    <h1>Upload Image for Face Detection</h1>
-    <form method="POST" enctype="multipart/form-data">
-        <input type="file" name="image" accept="image/*" required>
-        <button type="submit">Detect Faces</button>
-    </form>
+    <h1>Face Detection Options</h1>
+    <ul>
+        <li><a href="/webcam">Live Webcam Face Detection</a></li>
+    </ul>
 </body>
 </html>

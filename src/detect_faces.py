@@ -1,35 +1,21 @@
 import cv2
 from src.utils import load_model, draw_faces
 
-def detect_from_image(image_path: str, model_path: str):
-    face_cascade = load_model(model_path)
-    image = cv2.imread(image_path)
-    gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+face_cascade = load_model("models/haarcascade_frontalface_default.xml")
 
-    faces = face_cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=5)
-    result = draw_faces(image, faces)
-
-    cv2.imshow("Detected Faces", result)
-    cv2.waitKey(0)
-    cv2.destroyAllWindows()
-
-def detect_from_webcam(model_path: str):
-    face_cascade = load_model(model_path)
+def gen_frames():  # generate frames for webcam
     cap = cv2.VideoCapture(0)
-
     while True:
-        ret, frame = cap.read()
-        if not ret:
+        success, frame = cap.read()
+        if not success:
             break
+        else:
+            gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+            faces = face_cascade.detectMultiScale(gray, 1.1, 4)
+            frame = draw_faces(frame, faces)
 
-        gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-        faces = face_cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=5)
-
-        frame = draw_faces(frame, faces)
-        cv2.imshow("Webcam Face Detection", frame)
-
-        if cv2.waitKey(1) & 0xFF == ord('q'):
-            break
-
-    cap.release()
-    cv2.destroyAllWindows()
+            # encode frame as JPEG
+            ret, buffer = cv2.imencode('.jpg', frame)
+            frame = buffer.tobytes()
+            yield (b'--frame\r\n'
+                   b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
