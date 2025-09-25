@@ -32,7 +32,7 @@ face_detection_terminal/
 
 ⚙️ **Installation**
 
-$ git clone https://github.com/yourusername/face_detection_terminal.git  
+$ git clone https://github.com/Abhinavsathyann/face_detection_terminal.git  
 $ cd face_detection_terminal  
 
 # Optional: create virtual environment  
