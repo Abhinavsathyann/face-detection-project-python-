@@ -5,14 +5,14 @@ TERMINAL MODE LIVE WEBCAM FACE DETECTION
 🚀 **Technologies:** [Python 3.13+]   [OpenCV 4.12]   [NumPy]  
 ⚡ **Mode:** Terminal / Console  
 
-📌 **Project Overview**
+📌 # **Project Overview**
 
 This is a **terminal/console-based live face detection application**.
 It runs entirely in the terminal using your webcam for **real-time**
 face detection. Messages are displayed **on the video window** and
 **continuously in the terminal** for quick feedback.
 
-🎯 **Features**
+🎯 # **Features**
 
 ✔ Real-time face detection  
 ✔ Live webcam feed in OpenCV window  
