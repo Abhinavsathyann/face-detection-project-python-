@@ -1,26 +1,27 @@
-╔══════════════════════════════════════════════════════════╗
-║          TERMINAL MODE LIVE WEBCAM FACE DETECTION        ║
-╚══════════════════════════════════════════════════════════╝
+═════════════════════════════════════════════════════════
+         TERMINAL MODE LIVE WEBCAM FACE DETECTION        
+═════════════════════════════════════════════════════════
 
 [Python 3.13+]     [OpenCV 4.12]     [NumPy]
 
 ────────────────────────────────────────────────────────────
 Project Overview:
 ────────────────────────────────────────────────────────────
-This is a terminal/console-based face detection
-application using Python and OpenCV. It runs entirely
-in the terminal and uses your webcam for real-time
-face detection. Detection messages are displayed both
-on the video window and in the terminal.
+This is a terminal/console-based live face detection
+application using Python and OpenCV. The app runs
+entirely in the terminal and uses your webcam for
+real-time face detection. Detection messages are
+displayed both on the video window and in the terminal.
 
 ────────────────────────────────────────────────────────────
 Features:
 ────────────────────────────────────────────────────────────
 ✔ Real-time face detection
 ✔ Live webcam feed in OpenCV window
-✔ Terminal status: "Face Detected / No Face Detected"
+✔ Detection messages on video & terminal
 ✔ Cross-platform (Windows, Linux, macOS)
 ✔ Lightweight, no web interface required
+✔ Uses Haar Cascade model for face detection
 
 ────────────────────────────────────────────────────────────
 Project Structure:
@@ -28,7 +29,7 @@ Project Structure:
 face_detection_terminal/
 ├── main.py                     # Terminal-mode entry point
 ├── models/
-│   └── haarcascade_frontalface_default.xml
+│   └── haarcascade_frontalface_default.xml   # Face detection model
 ├── requirements.txt            # Python dependencies
 └── README.md                   # Project documentation
 
@@ -51,10 +52,10 @@ Usage:
 ────────────────────────────────────────────────────────────
 $ python main.py
 
-- Opens a live webcam feed
-- Detects faces in real-time
-- Shows detection message on video & terminal
-- Press 'q' to quit
+- Opens live webcam feed
+- Detects faces in real-time using Haar cascade model
+- Displays "Face Detected / No Face Detected" messages
+- Press 'q' to quit the application
 
 ────────────────────────────────────────────────────────────
 Dependencies:
@@ -62,6 +63,7 @@ Dependencies:
 - Python 3.13+
 - OpenCV (opencv-python)
 - NumPy
+- Haar cascade model (included in models/ folder)
 
 ────────────────────────────────────────────────────────────
 Future Improvements:
