@@ -1,10 +1,10 @@
-═════════════════════════════════════════════════════════
+
          TERMINAL MODE LIVE WEBCAM FACE DETECTION        
 ═════════════════════════════════════════════════════════
 
 [Python 3.13+]     [OpenCV 4.12]     [NumPy]
 
-────────────────────────────────────────────────────────────
+
 Project Overview:
 ────────────────────────────────────────────────────────────
 This is a terminal/console-based live face detection
@@ -13,7 +13,7 @@ entirely in the terminal and uses your webcam for
 real-time face detection. Detection messages are
 displayed both on the video window and in the terminal.
 
-────────────────────────────────────────────────────────────
+
 Features:
 ────────────────────────────────────────────────────────────
 ✔ Real-time face detection
@@ -23,7 +23,7 @@ Features:
 ✔ Lightweight, no web interface required
 ✔ Uses Haar Cascade model for face detection
 
-────────────────────────────────────────────────────────────
+
 Project Structure:
 ────────────────────────────────────────────────────────────
 face_detection_terminal/
@@ -33,7 +33,7 @@ face_detection_terminal/
 ├── requirements.txt            # Python dependencies
 └── README.md                   # Project documentation
 
-────────────────────────────────────────────────────────────
+
 Installation:
 ────────────────────────────────────────────────────────────
 $ git clone https://github.com/yourusername/face_detection_terminal.git
@@ -47,7 +47,7 @@ $ source venv/bin/activate     # Linux / Mac
 # Install dependencies
 $ pip install -r requirements.txt
 
-────────────────────────────────────────────────────────────
+
 Usage:
 ────────────────────────────────────────────────────────────
 $ python main.py
@@ -57,7 +57,7 @@ $ python main.py
 - Displays "Face Detected / No Face Detected" messages
 - Press 'q' to quit the application
 
-────────────────────────────────────────────────────────────
+
 Dependencies:
 ────────────────────────────────────────────────────────────
 - Python 3.13+
@@ -65,7 +65,7 @@ Dependencies:
 - NumPy
 - Haar cascade model (included in models/ folder)
 
-────────────────────────────────────────────────────────────
+
 Future Improvements:
 ────────────────────────────────────────────────────────────
 • Colored terminal messages (green/red)
@@ -74,7 +74,7 @@ Future Improvements:
 • Face recognition with names
 • ASCII art overlay for futuristic terminal UI
 
-────────────────────────────────────────────────────────────
+
 Contributing:
 ────────────────────────────────────────────────────────────
 1. Fork repository
