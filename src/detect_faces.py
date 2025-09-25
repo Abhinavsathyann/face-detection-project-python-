@@ -5,6 +5,8 @@ face_cascade = load_model("models/haarcascade_frontalface_default.xml")
 
 def gen_frames():  # generate frames for webcam
     cap = cv2.VideoCapture(0)
+    if not cap.isOpened():
+        raise RuntimeError("Could not start webcam. Make sure it is connected and not used by another app.")
     while True:
         success, frame = cap.read()
         if not success:
