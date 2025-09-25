@@ -1,6 +1,6 @@
-╔════════════════════════════════════════════════════════════════╗
-║        ████████ TERMINAL MODE LIVE WEBCAM FACE DETECTION ████████        ║
-╚════════════════════════════════════════════════════════════════╝
+
+ TERMINAL MODE LIVE WEBCAM FACE DETECTION 
+
 
 🚀 **Technologies:** [Python 3.13+]   [OpenCV 4.12]   [NumPy]  
 ⚡ **Mode:** Terminal / Console  
