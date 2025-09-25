@@ -19,15 +19,6 @@ FEATURES
 - Lightweight, no web interface required
 - Uses Haar Cascade model for fast face detection
 
-PROJECT STRUCTURE
-
-face_detection_terminal/
-├── main.py                      Terminal-mode entry point
-├── models/
-│   └── haarcascade_frontalface_default.xml   Face detection model
-├── requirements.txt             Python dependencies
-└── README.txt                   Project documentation
-
 INSTALLATION
 
 # Clone repository
